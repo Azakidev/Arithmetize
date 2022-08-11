@@ -46,7 +46,7 @@
             <property name="valign">center</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
-            <property name="pixbuf">UI-mockups/Placeholder.png</property>
+            <property name="pixbuf">ui/Placeholder.png</property>
           </object>
           <packing>
             <property name="expand">True</property>
