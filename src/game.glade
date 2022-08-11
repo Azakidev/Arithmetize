@@ -2,7 +2,15 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkApplicationWindow" id="game">
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">dialog-ok</property>
+  </object>
+  <object class="GtkTextBuffer" id="samplemaff">
+    <property name="text" translatable="yes">69 + 420</property>
+  </object>
+  <object class="GtkApplicationWindow" id="main_windowgame">
     <property name="name">Arithmetize</property>
     <property name="width-request">600</property>
     <property name="height-request">500</property>
@@ -112,16 +120,5 @@
         </child>
       </object>
     </child>
-    <accessibility>
-      <relation type="controlled-by" target="main_window"/>
-    </accessibility>
-  </object>
-  <object class="GtkImage" id="image1">
-    <property name="visible">True</property>
-    <property name="can-focus">False</property>
-    <property name="icon-name">dialog-ok</property>
-  </object>
-  <object class="GtkTextBuffer" id="samplemaff">
-    <property name="text" translatable="yes">69 + 420</property>
   </object>
 </interface>

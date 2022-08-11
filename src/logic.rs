@@ -1,7 +1,9 @@
 use rand::{thread_rng,Rng};
 use std::{io, cmp::Ordering};
 
-fn main() {
+#[allow(dead_code)]
+
+pub fn game_loop() {
 
     println!("Hello! Welcome to Aritmetyze.");
     println!("This little game will help you get better at arithmetic. Don't use a calculator, cheater ;)");
@@ -45,4 +47,45 @@ fn main() {
             _               =>  println!("Incorrect :("),
         };
     }
+}
+
+    //  Breaks down the logic from the CLI into the 2 main parts to use as needed
+
+    #[allow(dead_code)]
+
+pub fn rng() -> (String,i32) {
+
+    let mut rng = thread_rng();
+        let a = rng.gen_range(0..=100);
+        let b = rng.gen_range(0..=100);
+        let mut _q = 0;
+    
+        //Decides operator to use
+        let mut x = thread_rng();
+        let x = x.gen_range(0..3);
+  
+          
+        match x {
+            0 =>    {let quest = stringify!("{} + {}",a,b).to_string(); _q = a+b; return (quest,_q);},
+            1 =>    {let quest = stringify!("{} - {}",a,b).to_string(); _q = a-b; return (quest,_q);},
+            2 =>    {let quest = stringify!("{} * {}",a,b).to_string(); _q = a*b; return (quest,_q);},
+            _ =>    {println!("Fatal error"); panic!()},
+        };
+
+}
+
+#[allow(dead_code)]
+
+pub fn check(ans:String,truth:i32) -> bool {
+
+    let ans:i32 = match ans.trim().parse() {
+        Ok(num) => num,
+        Err(_)       => 0,
+    };
+    
+    match ans.cmp(&truth) {
+        Ordering::Equal =>  return true,
+        _               =>  return false,
+    };
+
 }
