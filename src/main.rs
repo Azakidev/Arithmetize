@@ -1,6 +1,6 @@
 use gio::prelude::*;
 use gtk::prelude::*;
-use gtk::{ApplicationWindow,Builder,GtkWindowExt};
+use gtk::{ApplicationWindow,Builder,GtkWindowExt,Button};
 //use glib;
 
 use std::env::args;
@@ -19,6 +19,11 @@ fn build_ui(application: &gtk::Application) {
     window.connect_delete_event(|_, _| {
         gtk::main_quit();
         Inhibit(true)
+    });
+
+    let btn:Button = builder.get_object("button1").expect("Failed to get button");
+    btn.connect_clicked( |_| {
+        println!("Started!");
     });
 
     window.show_all();
