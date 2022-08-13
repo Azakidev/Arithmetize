@@ -16,12 +16,12 @@ use gtk4::{
         prelude::{TemplateChild, WidgetImpl, WindowImpl},
         widget::{CompositeTemplate, WidgetClassSubclassExt},
     },
-    Button, CompositeTemplate, glib,
+    Button, CompositeTemplate, glib, /*traits::ButtonExt,*/
 };
 use adw::{subclass::prelude::AdwApplicationWindowImpl, ApplicationWindow};
 
 #[derive(CompositeTemplate, Default)]
-#[template(resource = "/main-window.ui")]
+#[template(resource = "/game.ui")]
 pub struct MainWindowTemplate {
     #[template_child]
     pub button: TemplateChild<Button>,
@@ -46,6 +46,7 @@ impl ObjectSubclass for MainWindowTemplate {
 impl ObjectImpl for MainWindowTemplate {
     fn constructed(&self, obj: &Self::Type) {
         self.parent_constructed(obj);
+
     }
 }
 

@@ -1,4 +1,6 @@
 mod main_window;
+mod game;
+//use game::MainWindow as GameWindow;
 use main_window::MainWindow;
 use gtk4::{self, traits::WidgetExt, prelude::*, gio::{resources_register_include}};
 use adw::Application;

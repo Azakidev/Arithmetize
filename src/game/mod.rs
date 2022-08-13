@@ -1,6 +1,6 @@
-mod mainwin;
+mod gamewin;
 
-use mainwin::MainWindowTemplate;
+use gamewin::MainWindowTemplate;
 
 use glib::{wrapper, Object};
 use gtk4::{
