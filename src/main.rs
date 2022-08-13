@@ -1,48 +1,26 @@
-use gio::prelude::*;
-use gtk::{prelude::*};
-use gtk::{ApplicationWindow,Builder,GtkWindowExt,Button};
+mod main_window;
+use main_window::MainWindow;
+use gtk4::{self, traits::WidgetExt, prelude::*, gio::{resources_register_include}};
+use adw::Application;
 
 mod logic;
 
-use std::env::args;
+fn build_ui(application: &Application) {
 
-fn build_ui(application: &gtk::Application) {
-
-    let glade_src = include_str!("test.glade");
-    let builder = Builder::from_string(glade_src);
-
-
-    
-    
-    let window: ApplicationWindow = builder.get_object("main_window").expect("Couldn't get the window");
-
-
-    window.set_application(Some(application));
-    window.set_title("Arithmetize");
-
-    window.show_all();
-    
-    let btn:Button = builder.get_object("button1").expect("Failed to get button");
-    btn.connect_clicked(|_| {
-        changestate();
-    });
-
+    let window = MainWindow::new(application);
+    window.show();
 
 }
 
-fn changestate() {
+pub fn main() {
 
-
-
-}
-
-fn main() {
-
-    let application = gtk::Application::new(Some("com.azakidev.aritmetize"), Default::default(),)
-    .expect("Initialization failed.");
+    resources_register_include!("gtk-aritmetize.gresource").expect("Failed to register resources");
+    
+    let application = Application::builder()
+        .application_id("com.azakiradev.arithmetize")
+        .build();
 
     application.connect_activate(build_ui);
-
-    application.run(&args().collect::<Vec<_>>());  
+    application.run();  
     
 }
