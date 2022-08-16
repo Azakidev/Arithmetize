@@ -2,5 +2,6 @@
 <gresources>
     <gresource>
         <file compressed="true">main-window.ui</file>
+        <file compressed="true">game.ui</file>
     </gresource>
 </gresources>

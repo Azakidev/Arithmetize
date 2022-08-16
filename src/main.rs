@@ -23,6 +23,6 @@ pub fn main() {
         .build();
 
     application.connect_activate(build_ui);
-    application.run();  
+    application.run(); 
     
 }
