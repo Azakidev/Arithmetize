@@ -3,7 +3,7 @@ name = "aritmetize"
 version = "0.1.0"
 edition = "2021"
 description = "A simple minigame as practice for programming a GTK app in Rust"
-license-file = ""
+license-file = "LICENSE.md"
 
 [package.metadata.appimage]
 assets = ["images"]
@@ -16,13 +16,14 @@ copyright = "None so far lol"
 extended-description = "Practice your mental math with this little minigame!"
 depends = "$auto"
 section = "Games"
+license-file = "LICENSE.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 gtk4 = "*"
 adw = {version="*", package="libadwaita"}
-glib = {version="*", features="v2.64"}
+glib = "*"
 
 rand = "0.8.5"
 
