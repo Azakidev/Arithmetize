@@ -38,6 +38,8 @@
                 <property name="cursor-visible">False</property>
                 <property name="buffer">Subtitle</property>
                 <property name="accepts-tab">False</property>
+                <property name="margin-start">20</property>
+                <property name="margin-end">20</property>
               </object>
             </child>
             <child>

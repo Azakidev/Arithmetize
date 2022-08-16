@@ -19,7 +19,7 @@ jobs:
     - name: Install deb
       run: cargo install cargo-deb
     - name: Install pkg-config
-      run: sudo apt install pgk-config
+      run: sudo apt install pkg-config
     - name: Build
       run: cargo deb
     - name: Run tests
