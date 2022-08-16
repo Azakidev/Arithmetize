@@ -2,10 +2,19 @@
 name = "aritmetize"
 version = "0.1.0"
 edition = "2021"
+description = "A simple minigame as practice for programming a GTK app in Rust"
 
 [package.metadata.appimage]
 assets = ["images"]
 auto_link = true
+
+[package.metadata.deb]
+name = "Aritmetize"
+maintainer = "Az <zazaguichi.outlook.com>"
+copyright = "None so far lol"
+extended-description = "Practice your mental math with this little minigame!"
+depends = "$auto"
+section = "Games"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

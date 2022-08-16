@@ -21,13 +21,11 @@
             </child>
             <child>
               <object class="GtkImage">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="halign">center</property>
-                <property name="valign">center</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="paintable">content/Placeholder.png</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="resource">/org/gtk/Arithmetize/Placeholder.png</property>
                 <property name="pixel-size">200</property>
               </object>
             </child>

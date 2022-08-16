@@ -21,7 +21,7 @@ use gtk4::{
 use adw::{subclass::prelude::AdwApplicationWindowImpl, ApplicationWindow};
 
 #[derive(CompositeTemplate, Default)]
-#[template(resource = "/main-window.ui")]
+#[template(resource = "/org/gtk/Arithmetize/main-window.ui")]
 pub struct MainWindowTemplate {
     #[template_child]
     pub button: TemplateChild<Button>,

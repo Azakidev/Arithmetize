@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <gresources>
-    <gresource>
+    <gresource prefix="/org/gtk/Arithmetize">
         <file compressed="true">main-window.ui</file>
         <file compressed="true">game.ui</file>
+        <file>Placeholder.png</file>
     </gresource>
 </gresources>
