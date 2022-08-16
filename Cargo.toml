@@ -21,7 +21,7 @@ section = "Games"
 [dependencies]
 gtk4 = "*"
 adw = {version="*", package="libadwaita"}
-glib = "*"
+glib = {version="*", features="v2.64"}
 
 rand = "0.8.5"
 
