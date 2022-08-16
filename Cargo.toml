@@ -3,6 +3,7 @@ name = "aritmetize"
 version = "0.1.0"
 edition = "2021"
 description = "A simple minigame as practice for programming a GTK app in Rust"
+license-file = ""
 
 [package.metadata.appimage]
 assets = ["images"]
