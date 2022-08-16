@@ -20,6 +20,7 @@ jobs:
       run: cargo install cargo-deb
     - name: Install pkg-config
       run: sudo apt install pkg-config
+      run: sudo apt install glib-2.66
     - name: Build
       run: cargo deb
     - name: Run tests
